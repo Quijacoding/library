@@ -19,34 +19,70 @@ h1 {
 
 .card {
     background-color: gray;
-    color: black;
-    height: 200px;
+    height: 300px;
     width: 200px;
     border-left: solid brown 10px;
+    border-right: solid rgb(235, 235, 235) 6px;
     border-radius: 5%;
     padding: 10px;
     margin: 5px;
     display: grid;
+    overflow: auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .card > h2 {
     color: red;
     display: grid;
-    align-content: start;
+    align-content: center;
     margin: auto;
+    grid-row: 1 / 1;
+    grid-column: 1 / 4;
 }
 
 .card > p {
     color: blue;
     display: grid;
-    justify-items: end;
     margin: auto;
     margin-top: 20px;
+    grid-row: 2;
+    grid-column: 1 / 4;
 }
 
 .card > .p2 {
     color: green;
     margin-top: 5px;
     display: flex;
-    align-content: flex-end;
+    grid-row: 3;
+    grid-column: 1 / 4;
+    
+}
+
+.deleteBook {
+    color: purple;
+    font-size: 80px;
+    display: grid;
+    justify-content: end;
+    grid-row: 4;
+    grid-column: 2;
+}
+
+.deleteBook:hover {
+    cursor: pointer;
+    color: rgb(255, 28, 255);
+}
+
+.checked {
+    color: green;
+    font-size: 80px;
+    display: grid;
+    justify-content: start;
+    grid-row: 4;
+    grid-column: 1;
+}
+
+.checked:hover {
+    cursor: pointer;
+    color: rgb(92, 227, 92);
 }
